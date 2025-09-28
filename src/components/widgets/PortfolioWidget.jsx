@@ -15,10 +15,10 @@ export default function PortfolioWidget({
   openModal,
 }) {
   const projectData = {
-    title: "Devolvio - Mock Fashion Landing Page",
+    title: "Roscoe.work Interactive Portfolio",
     description:
-      "Devolvio is an exclusive, membership-based rotational clothing service that is custom tailored to each customer. For this site, I really wanted to test the limits of whitespace, letting text elements and images float freely. In alignment with the company's modern, fashion-forward vision, I included bold uppercase sans-serif fonts, bold and minimal B&W/neutral colors, and abstract text indentation. Sharp corners, heavy font weights, and free-flowing components make this site feel uniquely empty yet straightforward.",
-    tools: ["HTML", "CSS", "Javascript"],
+      "For this simple portfolio landing page, I first took lots of inspiration from social media apps like Pinterest and also mobile UI components. I decided to make everything on the site appear as an individual widget with slightly staggered column format, just as in Apple's mobile UI or posts on Pinterest. I believe that this format makes it appear as a simple gallery to look at and easy to expand in the future. I wanted a friendly, inviting, modern yet classic look for my site. For this look, I used neutral pastel colors like off-white, rust, olive green, and golden yellow. I think the way that this portfolio shines is in its attention to detail for and micro-animations. I included small pop-up social media style like buttons in my project widgets, shadows and hover states on pretty much every element, firework animations on the skill widget's checkboxes, embedded 3d files, and even a rotating realistic vinyl record player to showcase my personal music taste.",
+    tools: ["HTML", "CSS", "Javascript", "Vite.js/Node.js", "Blender", "React"],
     gallery: [],
   };
   return (
