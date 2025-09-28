@@ -34,11 +34,7 @@ export default function TreesWidget({
       "Node.js",
       "JSON (Backend Data Management)",
     ],
-    gallery: [
-      { TreesGalleryImage1 },
-      { TreesGalleryImage2 },
-      { TreesGalleryImage3 },
-    ],
+    gallery: [TreesGalleryImage1, TreesGalleryImage2, TreesGalleryImage3],
   };
 
   return (

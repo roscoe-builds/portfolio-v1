@@ -24,9 +24,9 @@ export default function DevolvioWidget({
     description: "Under Construction",
     tools: ["HTML", "CSS", "Javascript"],
     gallery: [
-      { DevolvioGalleryImage1 },
-      { DevolvioGalleryImage2 },
-      { DevolvioGalleryImage3 },
+      DevolvioGalleryImage1,
+      DevolvioGalleryImage2,
+      DevolvioGalleryImage3,
     ],
   };
   return (

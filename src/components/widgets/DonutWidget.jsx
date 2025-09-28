@@ -26,11 +26,7 @@ export default function DonutWidget({ setModalOpen, openModal }) {
       "Illustrator",
       "Photoshop",
     ],
-    gallery: [
-      { DonutGalleryImage1 },
-      { DonutGalleryImage2 },
-      { DonutGalleryImage3 },
-    ],
+    gallery: [DonutGalleryImage1, DonutGalleryImage2, DonutGalleryImage3],
   };
 
   return (
