@@ -1,5 +1,6 @@
 import "./SpotifyWidgetVinyl.css";
-
+import SpotifyVinyl from "../../assets/images/vinyl-widget.png";
+import SpotifyVinylArm from "../../assets/images/spotify-widget-vinyl-tonearm.png";
 export default function SpotifyWidgetVinyl() {
   return (
     <div className="widget-wrapper item-fade-in">
@@ -10,16 +11,10 @@ export default function SpotifyWidgetVinyl() {
         >
           <div className="vinyl-label">My current listens</div>
           <div className="vinyl-record">
-            <img
-              src="../../assets/images/vinyl-widget.png"
-              className="vinyl-record-image"
-            ></img>
+            <img src={SpotifyVinyl} className="vinyl-record-image"></img>
           </div>
         </a>
-        <img
-          src="../../assets/images/spotify-widget-vinyl-tonearm.png"
-          className="vinyl-record-tonearm"
-        ></img>
+        <img src={SpotifyVinylArm} className="vinyl-record-tonearm"></img>
       </div>
     </div>
   );
