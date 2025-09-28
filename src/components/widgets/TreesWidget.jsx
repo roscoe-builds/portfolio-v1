@@ -1,5 +1,5 @@
 import "./TreesWidget.css";
-import "/Users/roscoe/portfolio/src/components/widgets/HoverButtons.css";
+import "src/components/widgets/HoverButtons.css";
 
 import LikeButton from "./LikeButton";
 import { useState } from "react";
