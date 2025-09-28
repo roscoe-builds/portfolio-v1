@@ -14,7 +14,7 @@ a {
   border: solid 2px #1d1d1d;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
-  background-image: url("src/assets/images/Wood027_2K-JPG_Color.jpg");
+  background-image: url("../../assets/images/Wood027_2K-JPG_Color.jpg");
   background-size: 400%;
   transition: box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
 }

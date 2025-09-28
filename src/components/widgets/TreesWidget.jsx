@@ -1,6 +1,12 @@
 import "./TreesWidget.css";
 import "./HoverButtons.css";
 
+// image imports
+import TreesWidgetImage from "../../assets/images/trees-widget-image.png";
+import TreesGalleryImage1 from "../../assets/images/trees-gallery-1.png";
+import TreesGalleryImage2 from "../../assets/images/trees-gallery-2.png";
+import TreesGalleryImage3 from "../../assets/images/trees-gallery-3.png";
+
 import LikeButton from "./LikeButton";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,9 +35,9 @@ export default function TreesWidget({
       "JSON (Backend Data Management)",
     ],
     gallery: [
-      "src/assets/images/trees-gallery-1.png",
-      "src/assets/images/trees-gallery-2.png",
-      "src/assets/images/trees-gallery-3.png",
+      { TreesGalleryImage1 },
+      { TreesGalleryImage2 },
+      { TreesGalleryImage3 },
     ],
   };
 
@@ -52,10 +58,7 @@ export default function TreesWidget({
           <LikeButton></LikeButton>
         </div>
 
-        <img
-          src="src/assets/images/trees-widget-image.png"
-          className="trees-widget-image"
-        ></img>
+        <img src={TreesWidgetImage} className="trees-widget-image"></img>
       </div>
     </div>
   );
