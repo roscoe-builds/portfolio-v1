@@ -11,13 +11,13 @@ export default function SpotifyWidgetVinyl() {
           <div className="vinyl-label">My current listens</div>
           <div className="vinyl-record">
             <img
-              src="src/assets/images/vinyl-widget.png"
+              src="../../assets/images/vinyl-widget.png"
               className="vinyl-record-image"
             ></img>
           </div>
         </a>
         <img
-          src="src/assets/images/spotify-widget-vinyl-tonearm.png"
+          src="../../assets/images/spotify-widget-vinyl-tonearm.png"
           className="vinyl-record-tonearm"
         ></img>
       </div>
