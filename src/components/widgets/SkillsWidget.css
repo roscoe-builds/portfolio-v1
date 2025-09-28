@@ -1,0 +1,271 @@
+/* --- Base styles (your existing ones) --- */
+
+.skills-widget {
+  border: solid 2px #1d1d1d;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+  margin-bottom: 1rem;
+}
+
+.skills-widget:hover {
+  box-shadow: 4px 4px 0 #c25e3e;
+  border: 2px solid #c25e3e;
+  transform: translateY(-5px);
+}
+
+.skills-widget-header {
+  display: flex;
+  justify-content: center;
+  /* text-transform: uppercase; */
+  font-size: 3.2rem;
+  color: #76a067;
+  font-family: owners-wide, sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.skills-widget-list {
+  list-style: none;
+  padding: 0;
+  margin-left: -2rem;
+}
+
+.skills-widget-list-item {
+  margin-bottom: 1rem;
+  color: #19120b;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-style: italic;
+  overflow: visible;
+  /* Remove flex-wrap here to avoid wrapping of label */
+}
+
+.skills-widget-checkbox {
+  display: inline-block;
+  opacity: 0;
+  accent-color: #ba5649;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 2px;
+  cursor: pointer;
+  z-index: 2;
+  /* removed position: absolute */
+}
+
+.skills-widget-label {
+  display: flex;
+  align-items: center; /* vertically center checkbox & text */
+  gap: 1rem; /* spacing between checkbox and text */
+  cursor: pointer;
+  flex-wrap: nowrap; /* keep checkbox and text on the same line */
+}
+
+.skill-text {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.checkmark {
+  position: relative;
+  display: inline-block;
+  height: 2.4rem;
+  width: 2.4rem;
+  padding: 0.1rem;
+  background-color: #eee;
+  border-radius: 4px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 rgba(76, 255, 80);
+}
+
+/* Checked state background + glow */
+.skills-widget-checkbox:checked + .checkmark {
+  background-color: #4caf50;
+  box-shadow: 0 0 10px rgba(122, 255, 122, 0.8);
+}
+
+/* Checkmark tick */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 8px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.skills-widget-checkbox:checked + .checkmark::after {
+  display: inline-block;
+}
+
+/* --- Firework styles --- */
+
+.firework {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  opacity: 0;
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+.firework-1 {
+  background-color: #76ff76;
+  animation: firework-1 0.6s forwards;
+}
+.firework-2 {
+  background-color: #a0ffa0;
+  animation: firework-2 0.6s forwards;
+}
+.firework-3 {
+  background-color: #4cff4c;
+  animation: firework-3 0.6s forwards;
+}
+.firework-4 {
+  background-color: #99ff99;
+  animation: firework-4 0.6s forwards;
+}
+.firework-5 {
+  background-color: #66cc66;
+  animation: firework-5 0.6s forwards;
+}
+.firework-6 {
+  background-color: #88ee88;
+  animation: firework-6 0.6s forwards;
+}
+
+/* Show and animate fireworks only when checked */
+.skills-widget-checkbox:checked + .checkmark .firework {
+  opacity: 1;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+}
+
+.skills-widget-checkbox:not(:checked) + .checkmark .firework {
+  opacity: 0;
+  animation-play-state: paused;
+  animation-name: none;
+}
+
+/* --- Firework keyframes --- */
+/* Circles expand outward in different directions, fade out */
+
+@keyframes firework-1 {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-20px, -20px) scale(2.5);
+    opacity: 0;
+  }
+}
+@keyframes firework-2 {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(20px, -15px) scale(2.5);
+    opacity: 0;
+  }
+}
+@keyframes firework-3 {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-18px, 18px) scale(2.5);
+    opacity: 0;
+  }
+}
+@keyframes firework-4 {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(18px, 18px) scale(2.5);
+    opacity: 0;
+  }
+}
+@keyframes firework-5 {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(10px, -25px) scale(2.5);
+    opacity: 0;
+  }
+}
+@keyframes firework-6 {
+  0% {
+    transform: translate(0, 0) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-25px, 10px) scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* --- Responsive tweaks --- */
+@media (max-width: 713px) {
+  .skills-widget-list-item {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .skills-widget-header {
+    font-size: 2.4rem;
+  }
+  .skills-widget {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 555px) {
+  .skills-widget-list-item {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.2rem;
+  }
+  .skills-widget-header {
+    font-size: 2rem;
+  }
+  .skills-widget {
+    padding-right: 0.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  /* .checkmark {
+    scale: 50%;
+  } */
+  .skills-widget-checkbox,
+  .checkmark {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .checkmark::after {
+    left: 5px;
+    top: 3px;
+    width: 3px;
+    height: 6px;
+    margin: 0.1rem;
+  }
+}

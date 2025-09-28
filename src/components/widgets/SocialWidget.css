@@ -1,0 +1,90 @@
+/* - jasper/pink/rust - #BA5649
+- caramel orange - #E2792E
+- olive/asparagus - #76A067
+- light playful ruddy blue - #6DAEEE
+- sea blue (darker) - #31608E */
+
+.social-widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  width: 80%;
+  gap: 2.4rem;
+  border: solid 2px #4a3527;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.social-widget:hover {
+  box-shadow: 4px 4px 0 #c25e3e;
+  transform: translateY(-5px);
+  border: solid 2px #c25e3e;
+}
+
+.social-icon {
+  width: 1rem;
+  height: 1rem;
+  background-color: none;
+}
+
+.social-widget-instagram,
+.social-widget-github,
+.social-widget-linkedin {
+  width: 4.8rem;
+  height: 4.8rem;
+  fill: orange;
+  transition: transform 0.3s ease, scale 0.3s ease, border-bottom 0.1s ease;
+  padding-bottom: 0.2rem;
+  padding-top: 0.2rem;
+}
+
+.social-widget-instagram:hover,
+.social-widget-github:hover,
+.social-widget-linkedin:hover {
+  border-bottom: 2px solid #c25e3e;
+  transform: translateY(-5px);
+  scale: 110%;
+}
+/* ------------------------- MEDIA QUERIES FOR TWO COLUMNS STATE ------------------------- */
+@media (max-width: 1300px) {
+  .social-widget {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 713px) {
+  .social-widget-instagram,
+  .social-widget-github,
+  .social-widget-linkedin {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .social-widget {
+    order: 2;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 555px) {
+  .social-widget-instagram,
+  .social-widget-github,
+  .social-widget-linkedin {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .social-widget {
+    gap: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 1rem auto;
+  }
+}
+
+/* ------------------------- MEDIA QUERIES FOR TWO COLUMNS STATE ------------------------- */

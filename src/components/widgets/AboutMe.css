@@ -1,0 +1,89 @@
+/* - jasper/pink/rust - #BA5649
+- caramel orange - #E2792E
+- olive/asparagus - #76A067
+- light playful ruddy blue - #6DAEEE
+- sea blue (darker) - #31608E */
+
+.about-me {
+  border: solid 2px #1d1d1d;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  /* margin-left: 10rem; */
+  background-color: none;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  cursor: default;
+  margin-bottom: 1rem;
+}
+/* 
+@media (max-width: 1600px) {
+  .about-me {
+    width: 50%;
+  }
+} */
+
+.about-me:hover {
+  box-shadow: 4px 4px 0 #c25e3e;
+  border: 2px solid #c25e3e;
+  transform: translateY(-5px);
+}
+
+.about-me-text {
+  font-size: clamp(1rem, 2vw, 1.6rem);
+  font-family: monospace;
+  color: #19120b;
+  /* margin: 1rem; */
+  line-height: 1.6;
+  text-align: left;
+  text-wrap: wrap;
+}
+
+.about-me-header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  /* text-transform: uppercase; */
+  font-size: 2.8rem;
+  color: #76a067;
+  font-family: owners-wide, sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 715px) {
+  .about-me-header {
+    font-size: 2.4rem;
+  }
+  .about-me-text {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 555px) {
+  .about-me-header {
+    font-size: 2rem;
+  }
+  .about-me-text {
+    font-size: 1.2rem;
+  }
+  .about-me {
+    padding-right: 0.5rem;
+  }
+}
+
+@media (max-width: 416px) {
+  .about-me-header {
+    font-size: 1.8rem;
+  }
+
+  .about-me {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .about-me-text {
+    font-size: 1rem;
+  }
+}

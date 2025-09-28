@@ -1,0 +1,322 @@
+/* Optional CSS reset */
+
+/* ### Font Sizing
+
+Header - 64px - 72px?
+
+Text - 12
+
+### **primary font (body text) - [Inter](https://fontsaadobe.com/fonts/inter-tight-variable?vf-font-size=14&vf-font=InterTight-Regular&vf-axes=wght%2C500)**
+
+### **secondary font (headers) - [Owners](https://fonts.adobe.com/fonts/owners) - bold + italic**
+
+### accent fonts - [adobe favorites](https://fonts.adobe.com/fonts?your_fonts=favorite)
+
+### [main colors](https://coolors.co/1d1d1d-4a3527-efe0d2)
+
+- rich black - #1d1d1d
+- espresso/cafe noir - #4a3527
+- cream/offwhite - #efe0d2
+
+### [**accent colors**](https://coolors.co/user/palettes/6872ae02f2580e000b59fae9)
+
+- jasper/pink/rust - #BA5649
+- caramel orange - #E2792E
+- olive/asparagus - #76A067
+- light playful ruddy blue - #6DAEEE
+- sea blue (darker) - #31608E
+
+
+###
+#F7F1E6
+#4B3621
+#C9945F
+#C25E3E
+#697A5C
+#E5D39D
+
+
+### **border radius - rounded-xl**
+
+### **buttons and popups - rounded and smooth - espresso or accent color**
+
+### **shadow styles -** light on widgets, heavy on hover
+
+### **hover state - border reaction and slightly lift + shadow** */
+
+.item-fade-in {
+  opacity: 1;
+}
+
+.page-loaded .item-fade-in {
+  opacity: 0; /* hide before animation starts */
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: owners-wide, sans-serif !important;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #faf5f0;
+  color: #1d1d1d;
+  /* color: #f7f1e6;
+  background: #1d1d1d; */
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1920px;
+  /* margin: 0 auto; */
+  padding: 0 1rem;
+}
+@media (max-width: 400px) {
+  .app-container {
+    padding-right: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 2rem;
+  }
+}
+
+.account {
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  fill: #faf5f0;
+  stroke: #1d1d1d;
+  transition: stroke 0.2s ease;
+  transition: fill 0.2s ease;
+  border: none;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.account:hover {
+  fill: #1d1d1d;
+  stroke: #faf5f0;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50vh;
+  left: -2px;
+  height: 20vh;
+  width: 5rem;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 2px solid;
+  border-left: none;
+  border-radius: 5px;
+  background-color: #4a3527;
+}
+
+.nav-home-icon {
+  fill: #faf5f0;
+  transition: fill 0.3s ease;
+}
+
+.nav-home-icon:hover {
+  fill: #4a3527;
+}
+
+.title-container {
+  text-align: center;
+}
+.title {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: visible;
+  margin: 2rem auto;
+  font-family: owners-wide, sans-serif !important;
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(1.6rem, 3vw + 1rem, 8rem);
+  color: #c25e3e;
+  /* typewriter effect */
+  border-right: 0.15em solid #c25e3e;
+  animation: typing 3.5s steps(30, end) forwards;
+  /* solid cursor during typing */
+}
+
+/* blinking cursor AFTER typing */
+.title.blinking {
+  animation: blink-caret 1s step-end infinite;
+}
+
+/* decorative underline */
+.line {
+  display: flex;
+  justify-self: center;
+  width: 85vw;
+  height: 0; /* avoid extra height */
+  border-bottom: 1px solid black;
+  margin-bottom: 5rem; /* vertical spacing + center align */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18ch;
+  }
+}
+
+@media (max-width: 400px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #c25e3e;
+  }
+}
+
+.my-masonry-grid {
+  display: flex;
+  justify-self: center;
+  margin-left: 0px; /* gutter size offset */
+  width: 85%;
+  gap: 0rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin-bottom: 10rem;
+  min-width: 375px;
+}
+
+.my-masonry-grid_column {
+  /* padding-left: 100px; gutter size */
+  background-clip: padding-box;
+  width: auto;
+}
+
+/* Style your widgets */
+.my-masonry-grid_column > div {
+  border-radius: 8px;
+  margin-right: 2rem;
+}
+
+.my-masonry-grid-item {
+  margin-bottom: 5rem;
+}
+
+.more {
+  display: flex;
+  justify-self: center;
+  color: #c25e3e;
+  margin-bottom: 2rem;
+  font-family: owners-wide, sans-serif;
+  font-size: clamp(2rem, 3vw, 4.8rem);
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  overflow: auto;
+  color: #4b3621;
+  overflow-x: hidden;
+}
+/* media queries */
+
+@media (max-width: 1200px) {
+  /* .title {
+    font-size: 5.4rem;
+  } */
+}
+
+@media (max-width: 1020px) {
+  /* .title {
+    font-size: 4.2rem;
+  } */
+}
+
+@media (max-width: 800px) {
+  /* .title {
+    font-size: 3.6rem;
+  } */
+}
+
+@media (max-width: 713px) {
+  .my-masonry-grid {
+    width: 90%;
+    flex-direction: row;
+  }
+
+  .social-widget {
+    order: 2;
+  }
+
+  .hero-widget {
+    order: 1;
+  }
+}
+
+@media (max-width: 555px) {
+  .my-masonry-grid {
+    width: 95%;
+  }
+
+  .line {
+    margin-bottom: 2rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 1rem; /* or height if horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #4a3527;
+}
+
+/* Thumb (draggable handle) */
+::-webkit-scrollbar-thumb {
+  background: #c25e3e;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+}

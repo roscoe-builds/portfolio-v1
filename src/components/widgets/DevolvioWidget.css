@@ -1,0 +1,27 @@
+.devolvio-widget {
+  border: solid 2px #1d1d1d;
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  cursor: default;
+  margin-bottom: 1rem;
+  background-color: #c25e3e;
+}
+
+.devolvio-widget:hover {
+  box-shadow: 4px 4px 0 #c25e3e;
+  border: 2px solid #c25e3e;
+  transform: translateY(-5px);
+}
+
+.devolvio-widget-image {
+  aspect-ratio: 16/9;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  border-radius: 12px;
+  scale: 90%;
+  padding: 0.2rem;
+  border: 3px solid #f7f1e6;
+  /* object-fit: fill; */
+}

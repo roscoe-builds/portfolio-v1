@@ -1,0 +1,28 @@
+/* - jasper/pink/rust - #BA5649
+- caramel orange - #E2792E
+- olive/asparagus - #76A067
+- light playful ruddy blue - #6DAEEE
+- sea blue (darker) - #31608E */
+
+.picture-widget {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid #1d1d1d;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9; /* optional for contrast */
+  margin-bottom: 1rem;
+}
+
+.picture-widget:hover {
+  box-shadow: 4px 4px 0 #c25e3e;
+  border: 2px solid #c25e3e;
+  transform: translateY(-5px);
+}
+
+.widget-image {
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  /* object-fit: cover; ensures it fills width while maintaining aspect ratio */
+}

@@ -1,0 +1,130 @@
+/* - rich black - #1d1d1d - espresso/cafe noir - #4a3527 
+#faf5f0 */
+
+.widget-hover {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.widget-hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.widget-hover:hover::after {
+  opacity: 1;
+}
+
+.widget-hover .hover-buttons {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* disable clicks when hidden */
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.widget-hover:hover .hover-buttons {
+  opacity: 1;
+  pointer-events: auto; /* enable clicks on hover */
+}
+
+/* button styling */
+.view-button {
+  position: absolute;
+  align-self: center;
+  top: 40%;
+  width: 60%;
+  background: #faf5f0;
+  color: #4a3527;
+  border-radius: 10px;
+  padding: 2rem 3rem;
+  font-family: owners-wide, sans-serif !important;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.view-button:hover {
+  background: #cac2ba;
+}
+
+.like-button {
+  font-size: 2rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  background: none;
+  border: none;
+  transition: color 0.3s ease;
+  outline: none;
+  color: #faf5f0;
+}
+
+.like-button:hover {
+  color: #d02e19;
+}
+
+.like-button.liked {
+  color: #da2e1b;
+  animation: pop 0.3s forwards;
+}
+
+/* Overlay background */
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.button-text {
+  margin-left: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .view-button {
+    width: 70%;
+  }
+}
+
+@media (max-width: 713px) {
+  .view-button {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .view-button {
+    padding: 1rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .like-button {
+    font-size: 1.5rem;
+    top: 1rem;
+    right: 1rem;
+  }
+}
