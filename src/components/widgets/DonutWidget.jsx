@@ -1,6 +1,6 @@
 import "./DonutWidget.css";
 import "./HoverButtons.css";
-import DonutVideo from "../assets/3d/fixed.mp4";
+import DonutVideo from "../../assets/images/fixed.mp4";
 import LikeButton from "./LikeButton";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
