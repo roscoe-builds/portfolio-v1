@@ -1,5 +1,6 @@
 import "./DonutWidget.css";
 import "./HoverButtons.css";
+import DonutVideo from "../assets/3d/fixed.mp4";
 import LikeButton from "./LikeButton";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -49,7 +50,7 @@ export default function DonutWidget({ setModalOpen, openModal }) {
           loop
           preload="auto"
           className="donut-video-1"
-          src="src/assets/3d/fixed.mp4"
+          src={DonutVideo}
         />
         <video
           autoPlay
@@ -58,7 +59,7 @@ export default function DonutWidget({ setModalOpen, openModal }) {
           loop
           preload="auto"
           className="donut-video-2"
-          src="src/assets/3d/fixed.mp4"
+          src={DonutVideo}
         />
         {/* <video
           autoPlay
