@@ -1,6 +1,9 @@
 import "./DevolvioWidget.css";
 import "./HoverButtons.css";
 import DevolvioImage from "../../assets/images/devolvio-widget-image.png";
+import DevolvioGalleryImage1 from "../../assets/images/devolvio-widget-image.png";
+import DevolvioGalleryImage2 from "../../assets/images/devolvio-widget-image-2.png";
+import DevolvioGalleryImage3 from "../../assets/images/devolvio-widget-image-3.png";
 
 import LikeButton from "./LikeButton";
 import React, { useState } from "react";
@@ -21,9 +24,9 @@ export default function DevolvioWidget({
     description: "Under Construction",
     tools: ["HTML", "CSS", "Javascript"],
     gallery: [
-      "src/assets/images/devolvio-widget-image.png",
-      "src/assets/images/devolvio-widget-image-2.png",
-      "src/assets/images/devolvio-widget-image-3.png",
+      { DevolvioGalleryImage1 },
+      { DevolvioGalleryImage2 },
+      { DevolvioGalleryImage3 },
     ],
   };
   return (
