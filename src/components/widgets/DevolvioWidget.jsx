@@ -1,5 +1,6 @@
 import "./DevolvioWidget.css";
 import "./HoverButtons.css";
+import DevolvioImage from "src/assets/images/devolvio-widget-image.png";
 
 import LikeButton from "./LikeButton";
 import React, { useState } from "react";
@@ -43,7 +44,7 @@ export default function DevolvioWidget({
         </div>
 
         <img
-          src="src/assets/images/devolvio-widget-image.png"
+          src={DevolvioImage}
           alt="Devolvio project preview"
           className="devolvio-widget-image"
         />
