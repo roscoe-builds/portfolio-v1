@@ -1,6 +1,10 @@
 import "./DonutWidget.css";
 import "./HoverButtons.css";
+
 import DonutVideo from "../../assets/images/fixed.mp4";
+import DonutGalleryImage1 from "../../assets/images/donut-gallery-1.png";
+import DonutGalleryImage2 from "../../assets/images/donut-gallery-2.png";
+import DonutGalleryImage3 from "../../assets/images/donut-gallery-3.png";
 import LikeButton from "./LikeButton";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,9 +27,9 @@ export default function DonutWidget({ setModalOpen, openModal }) {
       "Photoshop",
     ],
     gallery: [
-      "src/assets/images/donut-gallery-1.png",
-      "src/assets/images/donut-gallery-2.png",
-      "src/assets/images/donut-gallery-3.png",
+      { DonutGalleryImage1 },
+      { DonutGalleryImage2 },
+      { DonutGalleryImage3 },
     ],
   };
 

@@ -1,6 +1,7 @@
 import "./PortfolioWidget.css";
 import "./HoverButtons.css";
 
+import PortfolioWidgetImage from "../../assets/images/portfolio-widget-image.png";
 import LikeButton from "./LikeButton";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,11 +19,7 @@ export default function PortfolioWidget({
     description:
       "Devolvio is an exclusive, membership-based rotational clothing service that is custom tailored to each customer. For this site, I really wanted to test the limits of whitespace, letting text elements and images float freely. In alignment with the company's modern, fashion-forward vision, I included bold uppercase sans-serif fonts, bold and minimal B&W/neutral colors, and abstract text indentation. Sharp corners, heavy font weights, and free-flowing components make this site feel uniquely empty yet straightforward.",
     tools: ["HTML", "CSS", "Javascript"],
-    gallery: [
-      "src/assets/images/devolvio-widget-image.png",
-      "src/assets/images/devolvio-widget-image-2.png",
-      "src/assets/images/devolvio-widget-image-3.png",
-    ],
+    gallery: [],
   };
   return (
     <div className="widget-wrapper item-fade-in">
@@ -42,7 +39,7 @@ export default function PortfolioWidget({
         </div>
 
         <img
-          src="src/assets/images/portfolio-widget-image.png"
+          src={PortfolioWidgetImage}
           alt="Portfolio project preview"
           className="portfolio-widget-image"
         />
