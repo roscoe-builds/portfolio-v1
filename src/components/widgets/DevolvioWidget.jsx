@@ -1,6 +1,6 @@
 import "./DevolvioWidget.css";
 import "./HoverButtons.css";
-import DevolvioImage from "src/assets/images/devolvio-widget-image.png";
+import DevolvioImage from "public/devolvio-widget-image.png";
 
 import LikeButton from "./LikeButton";
 import React, { useState } from "react";
