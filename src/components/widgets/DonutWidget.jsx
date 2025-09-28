@@ -1,5 +1,5 @@
 import "./DonutWidget.css";
-import "src/components/widgets/HoverButtons.css";
+import "./HoverButtons.css";
 import LikeButton from "./LikeButton";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

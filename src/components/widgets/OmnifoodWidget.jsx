@@ -1,5 +1,5 @@
 import "./OmnifoodWidget.css";
-import "src/components/widgets/HoverButtons.css";
+import "./HoverButtons.css";
 import Modal from "../Modal";
 
 import LikeButton from "./LikeButton";

@@ -1,5 +1,5 @@
 import "./PortfolioWidget.css";
-import "src/components/widgets/HoverButtons.css";
+import "./HoverButtons.css";
 
 import LikeButton from "./LikeButton";
 import React, { useState } from "react";
