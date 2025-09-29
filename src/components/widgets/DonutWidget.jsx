@@ -27,6 +27,7 @@ export default function DonutWidget({ setModalOpen, openModal }) {
       "Photoshop",
     ],
     gallery: [DonutGalleryImage1, DonutGalleryImage2, DonutGalleryImage3],
+    link: "https://vimeo.com/1122738849?share=copy",
   };
 
   return (
