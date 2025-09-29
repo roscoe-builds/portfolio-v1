@@ -35,6 +35,7 @@ export default function TreesWidget({
       "JSON (Backend Data Management)",
     ],
     gallery: [TreesGalleryImage1, TreesGalleryImage2, TreesGalleryImage3],
+    link: "https://roscoe-builds-trees.onrender.com",
   };
 
   return (

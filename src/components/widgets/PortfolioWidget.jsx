@@ -19,7 +19,6 @@ export default function PortfolioWidget({
     description:
       "For this simple portfolio landing page, I first took lots of inspiration from social media apps like Pinterest and also mobile UI components. I decided to make everything on the site appear as an individual widget with slightly staggered column format, just as in Apple's mobile UI or posts on Pinterest. I believe that this format makes it appear as a simple gallery to look at and easy to expand in the future. I wanted a friendly, inviting, modern yet classic look for my site. For this look, I used neutral pastel colors like off-white, rust, olive green, and golden yellow. I think the way that this portfolio shines is in its attention to detail for and micro-animations. I included small pop-up social media style like buttons in my project widgets, shadows and hover states on pretty much every element, firework animations on the skill widget's checkboxes, embedded 3d files, and even a rotating realistic vinyl record player to showcase my personal music taste.",
     tools: ["HTML", "CSS", "Javascript", "Vite.js/Node.js", "Blender", "React"],
-    gallery: [],
   };
   return (
     <div className="widget-wrapper item-fade-in">
