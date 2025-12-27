@@ -1,10 +1,11 @@
 import "./Hero.css";
 
-export default function Hero({ width, height, text }) {
+export default function Hero({ width, height, text, subtext }) {
   return (
     <div className="widget-wrapper item-fade-in">
       <div className="hero" style={{ width: width, height: height }}>
         <p className="hero-text">{text}</p>
+        <p className="hero-subtext">{subtext}</p>
         <button
           className="hero-button"
           onClick={() =>

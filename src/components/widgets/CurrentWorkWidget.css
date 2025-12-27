@@ -4,7 +4,7 @@
 - light playful ruddy blue - #6DAEEE
 - sea blue (darker) - #31608E */
 
-.about-me {
+.current-work {
   border: solid 2px #1d1d1d;
   border-radius: 20px;
   padding: 1rem 1.5rem;
@@ -23,13 +23,13 @@
   }
 } */
 
-.about-me:hover {
+.current-work:hover {
   box-shadow: 4px 4px 0 #c25e3e;
   border: 2px solid #c25e3e;
   transform: translateY(-5px);
 }
 
-.about-me-text {
+.current-work-text {
   font-size: clamp(1rem, 2vw, 1.6rem);
   font-family: monospace;
   color: #19120b;
@@ -39,7 +39,16 @@
   text-wrap: wrap;
 }
 
-.about-me-header {
+.current-work-list {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.current-work-list-item {
+  font-size: 1.6rem;
+}
+
+.current-work-header {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -53,37 +62,37 @@
 }
 
 @media (max-width: 715px) {
-  .about-me-header {
+  .current-work-header {
     font-size: 2.4rem;
   }
-  .about-me-text {
+  .current-work-text {
     font-size: 1.4rem;
   }
 }
 
 @media (max-width: 555px) {
-  .about-me-header {
+  .current-work-header {
     font-size: 2rem;
   }
-  .about-me-text {
+  .current-work-text {
     font-size: 1.2rem;
   }
-  .about-me {
+  .current-work {
     padding-right: 0.5rem;
   }
 }
 
 @media (max-width: 416px) {
-  .about-me-header {
+  .current-work-header {
     font-size: 1.8rem;
   }
 
-  .about-me {
+  .current-work {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
 
-  .about-me-text {
+  .current-work-text {
     font-size: 1rem;
   }
 }

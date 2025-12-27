@@ -5,7 +5,7 @@ export default function SkillsWidget({ width, height, header, text }) {
   const skills = [
     "HTML, CSS & Three.js",
     "UI/UX Design",
-    "3D & Web Interactivity",
+    "3D Elements",
     "Visual Strategy",
   ];
 

@@ -2,7 +2,7 @@
 
 .skills-widget {
   border: solid 2px #1d1d1d;
-  border-radius: 12px;
+  border-radius: 20px;
   padding: 1rem 1.5rem;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s ease, transform 0.3s ease;

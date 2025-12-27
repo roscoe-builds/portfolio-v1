@@ -15,8 +15,8 @@ import DonutWidget from "./components/widgets/DonutWidget";
 import SpotifyWidgetEmbed from "./components/widgets/SpotifyWidgetEmbed";
 import SpotifyWidgetVinyl from "./components/widgets/SpotifyWidgetVinyl";
 import Modal from "./components/Modal";
+import CurrentWorkWidget from "./components/widgets/CurrentWorkWidget";
 import PortfolioWidget from "./components/widgets/PortfolioWidget";
-
 export default function App() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalData, setModalData] = useState({
@@ -80,17 +80,29 @@ export default function App() {
         <Hero
           // width="100%"
           // height="45%"
-          text="I create web experiences that 'click'"
+          text="I build clean, interactive web experiences."
+          subtext="Frontend-focused developer creating thoughtful UI and dynamic interfaces."
           className="hero-widget my-masonry-grid-item"
         ></Hero>
 
         <AboutMe
           // width="70%" /* bug here */
           // height="30%"
-          header="Hi, I'm Jude Roscoe."
-          text="I am an upcoming front-end focused developer based on the West Coast. I am currently studying Computer Science at Cal Poly and hope to help others build visually-appealing, interactive, and useful web products. I am passionate about 3D/Blender, Web Development, UI/UX Design and Music. I hope to continue improving at making inspiring all-around web experiences."
+          header="Hi, I'm Jude."
+          text="I am a frontend-focused developer studying Computer Science at Cal Poly. I enjoy building clean, interactive web experiences with a strong focus on usability and detail. I’ve worked with React, JavaScript, and modern frontend tools, and I enjoy blending logic, design, and motion to create interfaces that feel intuitive and intentional."
           className="about-me-widget my-masonry-grid-item"
         ></AboutMe>
+
+        <CurrentWorkWidget
+          // width="70%" /* bug here */
+          // height="30%"
+          header="Currently working on:"
+          listitem1="UI/UX design and prototyping"
+          listitem2="Frontend development for a digital magazine"
+          listitem3="Interface design for nonprofit tools"
+          listitem4="Interactive web experiences"
+          className="-widget my-masonry-grid-item"
+        ></CurrentWorkWidget>
 
         <SpotifyWidgetVinyl className="spotify-widget my-masonry-grid-item"></SpotifyWidgetVinyl>
 
@@ -122,6 +134,16 @@ export default function App() {
           setModalOpen={setModalOpen}
           openModal={openModalWithData}
         ></DonutWidget>
+
+        {/* fix portfolio widget so it can be stacked evenly in the masonry grid columns. */}
+
+        {/* 
+        <PortfolioWidget
+          className="portfolio-widget my-masonry-grid-item"
+          setModalOpen={setModalOpen}
+          openModal={openModalWithData}
+        ></PortfolioWidget> */}
+
         <OmnifoodWidget
           className="omnifood-widget my-masonry-grid-item"
           setModalOpen={setModalOpen}
@@ -133,12 +155,10 @@ export default function App() {
           setModalOpen={setModalOpen}
           openModal={openModalWithData}
         ></TreesWidget>
-        <PortfolioWidget
-          className="portfolio-widget my-masonry-grid-item"
-          setModalOpen={setModalOpen}
-          openModal={openModalWithData}
-        ></PortfolioWidget>
       </Masonry>
+
+      {/* currently work on widget
+       */}
 
       <div className="more">
         <h2 className="more-title">More coming soon...</h2>
